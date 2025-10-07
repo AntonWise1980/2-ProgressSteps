@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
 
+:root{
+    --line-border-fill: blueviolet;
+    --line-border-empty: lightgray; 
+}
+
 *{
     box-sizing: border-box;
 }
@@ -34,7 +39,7 @@ width: 350px;
 
 .progress-container::before {
     content: '';
-    background-color:lightgray;
+    background-color: var(--line-border-empty);
     position: absolute;
     top: 50%;
     left: 0;
@@ -47,7 +52,7 @@ width: 350px;
 
 /* progress class sadece çizgi için açılan sınıfın özellikleri */
 .progress{
-    background-color: blue;
+    background-color: var(--line-border-fill);
     position: absolute;
     top: 50%;
     left: 0;
@@ -55,12 +60,43 @@ width: 350px;
     height: 4px;
     width: 0%;
     z-index: -1;
-    transition: .4s ease;
+    transition: .9s ease;
 }
 
 
 /* circle halkamızın özelliklerini yazıyoruz. */
 
 .circle{
-    background-color: white;
+    background-color: var(--line-border-empty);
+    color: darkblue;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--line-border-empty);
+    transition: .9s ease;
+}
+
+/* Eğer circle sınıfımız active olursa border rengimizi alacak. */
+.circle.active{
+    border-color: var(--line-border-fill);
+}
+
+/* Son element olarak buttonlarımızın sınıf btn nin özelliklerini giriyorum. */
+.btn{
+    background-color: var(--line-border-fill);
+    color: white;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 8px 30px;
+    margin: 5px;
+    font-size: 14px;
+}
+.btn:active{
+    transform: scale(.90);
+
 }
