@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Progress Steps</title>
 </head>
 <body>
@@ -10,17 +11,16 @@
      ancak ana container almak çok önemli bir konu tavsiye ederim -->
     <div class="container">
         
-        <!-- Ana konteynır içerisindeyiz, steplerin olduğu containerımız bu -->
+        <!-- Progress konteynır rakamların ve çizginin oluştuğu class içerisindeyiz, steplerin olduğu containerımız bu -->
         <div class="progress-container">
-            <div class="progress" id="progress">
-                <div class="circle active">1</div>
-                <div class="circle">2</div>
-                <div class="circle">3</div>
-                <div class="circle">4</div>
-            </div>
+            <div class="progress" id="progress"></div>
+            <div class="circle active">1</div>
+            <div class="circle">2</div>
+            <div class="circle">3</div>
+            <div class="circle">4</div>
         </div>
 
-        <!-- yine ana konteynırın içerisindeyiz ve ileri geri butonları ekliyoruz -->
+        <!-- yine ana (container class )konteynırın içerisindeyiz ve ileri geri butonları ekliyoruz -->
         <button class="button btn" id="prev" disabled>Prev</button>
         <button class="button btn" id="next">Next</button>
     </div>

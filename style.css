@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-color: antiquewhite;
+    font-family: 'Lexend', 'sans-serif';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+
+/* Ana konteynırımızın özelliklerini yazıyoruz. */
+.container{
+    text-align: center;
+}
+
+/* progres-container class'ımız için özelliklerini yazıyoruz */
+.progress-container{
+display: flex;
+justify-content: space-between;
+position: relative;
+margin-bottom: 30px;
+max-width: 100%;
+width: 350px;
+}
+
+.progress-container::before {
+    content: '';
+    background-color:lightgray;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    z-index: -1;
+    
+}
+
+/* progress class sadece çizgi için açılan sınıfın özellikleri */
+.progress{
+    background-color: blue;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 0%;
+    z-index: -1;
+    transition: .4s ease;
+}
+
+
+/* circle halkamızın özelliklerini yazıyoruz. */
+
+.circle{
+    background-color: white;
+}
