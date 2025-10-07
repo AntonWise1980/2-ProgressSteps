@@ -100,3 +100,11 @@ width: 350px;
     transform: scale(.90);
 
 }
+.btn:focus{
+    outline: 0;
+}
+
+.btn:disabled{
+    background-color: var(--line-border-empty);
+    cursor: not-allowed;
+}
